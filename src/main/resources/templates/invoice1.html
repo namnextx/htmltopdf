@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Invoice</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .invoice-box {
+            width: 100%;
+            padding: 20mm;
+            box-sizing: border-box;
+            page-break-inside: avoid;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header .invoice-details {
+            text-align: right;
+        }
+        .information {
+            margin-bottom: 20px;
+        }
+        .information .billed-to {
+            margin-bottom: 20px;
+        }
+        .items-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .items-table th,
+        .items-table td {
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            padding: 8px;
+            text-align: right;
+        }
+        .items-table th {
+            background: #eee;
+            font-weight: bold;
+        }
+        .items-table th:first-child,
+        .items-table td:first-child {
+            text-align: left;
+        }
+        .totals {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .totals .total-amount {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .totals .line-above-total {
+            border-top: 1px solid #000;
+            margin-top: 10px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .thanks {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+
+        .footer {
+            margin-top: 20px;
+            page-break-inside: avoid;
+            width: 100%;
+        }
+        .footer-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .footer-table td {
+            vertical-align: bottom;
+            padding: 0;
+        }
+        .payment-info {
+            width: 50%;
+        }
+        .signature {
+            width: 50%;
+            text-align: right;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="invoice-box">
+    <div>
+        <div class="header">
+            <img src="https://www.scandinaviansoftwarepark.com/wp-content/uploads/2021/11/Lumera-Logo.png" alt="Company logo" width="150" height="100"/>
+            <div class="invoice-details">
+                <h1>INVOICE</h1>
+                Invoice No. 12345<br/>
+                16 June 2025
+            </div>
+        </div>
+        <div class="information">
+            <div class="billed-to">
+                <strong>BILLED TO:</strong><br/>
+                Imani Olowe<br/>
+                +123-456-7890<br/>
+                63 Ivy Road, Hawkville, GA, USA 31036
+            </div>
+        </div>
+        <table class="items-table">
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Eggshell Camisole Top</td>
+                <td>1</td>
+                <td>$123</td>
+                <td>$123</td>
+            </tr>
+            <tr>
+                <td>Cuban Collar Shirt</td>
+                <td>2</td>
+                <td>$127</td>
+                <td>$254</td>
+            </tr>
+            <tr>
+                <td>Floral Cotton Dress</td>
+                <td>1</td>
+                <td>$123</td>
+                <td>$123</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="totals">
+            <div>Subtotal: $500</div>
+            <div>Tax (0%): $0</div>
+            <div class="line-above-total">
+                <div class="total-amount">Total: $500</div>
+            </div>
+        </div>
+        <div class="thanks">
+            Thank you!
+        </div>
+    </div>
+
+    <div class="footer">
+        <table class="footer-table">
+            <tr>
+                <td class="payment-info">
+                    <strong>PAYMENT INFORMATION</strong><br/>
+                    Briard Bank<br/>
+                    Account Name: Samira Hadid<br/>
+                    Account No.: 123-456-7890<br/>
+                    Pay by: 5 July 2025<br/>
+                    123 Anywhere St., Any City, ST 12345
+                </td>
+                <td class="signature">
+                    Samira Hadid<br/>
+                    123 Anywhere St., Any City, ST 12345
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+</body>
+</html>
